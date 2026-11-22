@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webnest | Portfolio</title>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Inter',sans-serif;
+        }
+
+        body{
+            background:#0d1117;
+            color:#ecf2f8;
+            line-height:1.6;
+            overflow-x:hidden;
+        }
+
+        body::before{
+            content:'';
+            position:absolute;
+            top:-10%;
+            left:50%;
+            transform:translateX(-50%);
+            width:600px;
+            height:400px;
+            background:radial-gradient(circle, rgba(56,139,253,0.15) 0%, transparent 70%);
+            z-index:-1;
+        }
+
+        header{
+            max-width:1100px;
+            margin:auto;
+            padding:40px 20px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:20px;
+        }
+
+        .brand{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            font-weight:700;
+            font-size:22px;
+            color:#fff;
+        }
+
+        .brand img{
+            width:32px;
+            height:32px;
+        }
+
+        .hero{
+            max-width:800px;
+            margin:60px auto 80px;
+            text-align:center;
+            padding:0 20px;
+        }
+
+        .hero h1{
+            font-size:42px;
+            color:#fff;
+            margin-bottom:16px;
+        }
+
+        .hero h1 span{
+            background:linear-gradient(45deg,#58a6ff,#1f6feb);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        .hero p{
+            font-size:18px;
+            color:#8b949e;
+        }
+
+        .portfolio-container{
+            max-width:1100px;
+            margin:auto;
+            padding:0 20px 100px;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:#161b22;
+            border:1px solid #30363d;
+            border-radius:12px;
+            overflow:hidden;
+            transition:.3s;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .card:hover{
+            transform:translateY(-6px);
+            border-color:#58a6ff;
+            box-shadow:0 10px 20px rgba(0,0,0,.3);
+        }
+
+        .card-preview{
+            height:220px;
+            overflow:hidden;
+        }
+
+        .card-preview img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            transition:.5s;
+        }
+
+        .card:hover .card-preview img{
+            transform:scale(1.05);
+        }
+
+        .card-info{
+            padding:24px;
+            display:flex;
+            flex-direction:column;
+            flex-grow:1;
+        }
+
+        .card-info h3{
+            margin-bottom:10px;
+            color:#fff;
+        }
+
+        .card-info p{
+            color:#8b949e;
+            margin-bottom:20px;
+            flex-grow:1;
+        }
+
+        .btn{
+            display:inline-flex;
+            justify-content:center;
+            align-items:center;
+            padding:12px 18px;
+            background:#21262d;
+            color:#fff;
+            text-decoration:none;
+            border-radius:6px;
+            font-weight:600;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#58a6ff;
+        }
+
+        footer{
+            text-align:center;
+            padding:40px 20px;
+            border-top:1px solid #21262d;
+            color:#8b949e;
+            margin-top:60px;
+        }
+
+        @media(max-width:600px){
+            .hero h1{
+                font-size:32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <img src="images/logo.png" alt="logo">
+        <span>
+  Webnest | by Ali ALfakih | Tiktok
+  <a href="https://www.tiktok.com/@webnest.ai" target="_blank" rel="noopener noreferrer" class="tiktok-link">
+    @webnest.ai
+  </a>
+</span>
+
+<style>
+.tiktok-link {
+    background: linear-gradient(45deg, #58a6ff, #1f6feb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.tiktok-link:hover {
+    background: linear-gradient(45deg, #79c0ff, #388bfd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+</style>
+    </div>
+
+    <a href="resume.pdf" class="btn" target="_blank">
+        📄 Check MY Resume
+    </a>
+</header>
+
+<section class="hero">
+    <h1>My Web Development <span>Projects</span></h1>
+    <p>
+        Explore some of the websites and applications I have designed and developed.
+    </p>
+</section>
+
+<main class="portfolio-container">
+
+    <div class="grid">
+
+        <article class="card">
+            <div class="card-preview">
+                <img src="images/project4.jpg" alt="Restaurant simple">
+            </div>
+
+            <div class="card-info">
+                <h3>Restaurant simple menu</h3>
+                <p>
+                    A simple and modern restaurant menu website showcasing delicious food, categories, prices, and photos in a clean and easy-to-use design.
+                </p>
+
+                <a href="https://ali-fakiih.github.io/restaurant/" class="btn" target="_blank">
+                    View Live Website →
+                </a>
+            </div>
+        </article>
+<article class="card">
+            <div class="card-preview">
+                <img src="images/brightline.jpg" alt="brightline">
+            </div>
+ <div class="card-info">
+                <h3>brightline home services</h3>
+                <p>
+                  Brightline is a local home services company that helps homeowners with everyday repairs, maintenance, and home improvement tasks. </p>
+
+                <a href="https://ali-fakiih.github.io/brightline/" class="btn" target="_blank">
+                    View Live Website →
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-preview">
+                <img src="images/project2.jpg" alt="Cozy Piano">
+            </div>
+
+            <div class="card-info">
+                <h3>Cozy Piano</h3>
+                <p>
+                    Online piano application with playable keys, sounds and responsive design.
+                </p>
+
+                <a href="https://cozypiano.netlify.app/" class="btn" target="_blank">
+                    View Live Website →
+                </a>
+            </div>
+        </article>
+
+<article class="card">
+            <div class="card-preview">
+                <img src="images/coffe.jpg" alt="coffe">
+            </div>
+
+            <div class="card-info">
+                <h3>coffee shop</h3>
+                <p>
+                  A modern digital menu website designed for a coffee shop, allowing customers to explore coffee selections, browse different categories.
+                </p>
+
+                <a href="https://ali-fakiih.github.io/coffe-menu/" class="btn" target="_blank">
+                    View Live Website →
+                </a>
+            </div>
+        </article>
+
+ <article class="card"> 
+            <div class="card-preview">
+                <img src="images/nexora.jpg" alt="nexora">
+            </div>
+
+            <div class="card-info">
+                <h3>Cozy Piano</h3>
+                <p>
+                    SaaS landing page for a collaborative workspace platform
+                </p>
+
+                <a href="https://ali-fakiih.github.io/nexora/" class="btn" target="_blank">
+                    View Live Website →
+                </a>
+            </div>
+        </article>
+
+
+         <article class="card"> 
+            <div class="card-preview">
+                <img src="images/life.jpg" alt="ateliar">
+            </div>
+
+            <div class="card-info">
+                <h3>ateliar photography</h3>
+                <p>
+                    The website Atelier Frame is a premium photography portfolio and booking website for a professional photographer.
+                </p>
+
+                <a href="https://ali-fakiih.github.io/ateliar/" class="btn" target="_blank">
+                    View Live Website →
+                </a>
+            </div>
+        </article>
+
+
+
+<article class="card">
+            <div class="card-preview">
+                <img src="images/lune.jpg" alt="lune">
+            </div>
+ <div class="card-info">
+                <h3>lune and linen</h3>
+                <p>
+                 Lune & Linen is a modern, elegant e-commerce website for a boutique selling curated lifestyle products, home accessories..
+                </p> <a href="https://ali-fakiih.github.io/lune-store/" class="btn" target="_blank">
+                    View Live Website →
+                </a>
+            </div>
+        </article>
+
+
+
+        <article class="card">
+            <div class="card-preview">
+                <img src="images/project1.jpg" alt="Puzzle Game">
+            </div>
+
+            <div class="card-info">
+                <h3>Puzzle Game</h3>
+                <p>
+                    Interactive browser puzzle game built using HTML, CSS and JavaScript.
+                </p>
+
+                <a href="https://puzzle-game-free.netlify.app/" class="btn" target="_blank">
+                    View Live Website →
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-preview">
+                <img src="images/project3.jpg" alt="Zay Store">
+            </div>
+
+            <div class="card-info">
+                <h3>Zay Store</h3>
+                <p>
+                    Modern e-commerce website featuring product showcase and responsive layouts.
+                </p>
+
+                <a href="https://zaystoree.netlify.app/" class="btn" target="_blank">
+                    View Live Website →
+                </a>
+            </div>
+        </article>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>Contact Me</p>
+    <p>WhatsApp: +961 81928425</p>
+    <p>Email: alihani127299@gmail.com</p>
+    <br>
+    <p>&copy; 2024-2027 Webnest. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
